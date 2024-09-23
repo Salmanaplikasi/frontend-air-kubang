@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+//import React, { useContext } from "react";
 import "./Services.css";
 import Card from "../CardService/Card";
 import HeartEmoji from "../../imgs/heartemoji.png";
@@ -6,11 +6,10 @@ import Glasses from "../../imgs/glasses.png";
 import Humble from "../../imgs/humble.png";
 // import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
-import Resume from './resume.pdf';
+//import Resume from './resume.pdf';
 
 const Services = () => {
   // context
-  // const theme = useContext(themeContext);
   // const darkMode = theme.state.darkMode;
 
   // transition
@@ -24,16 +23,19 @@ const Services = () => {
       {/* left side */}
       <div className="awesome">
         {/* dark mode */}
-        <span style={{ color:  "" }}>Our Innovative</span>
-        <span>Services</span>
+        <span style={{ color:  "" }}>Layanan yang</span>
+        <span> diberikan</span>
         <span>
-        Kami menyediakan solusi teknologi terdepan untuk memantau dan 
-        <br />
-        mengelola perkebunan kelapa sawit secara efisien dan transparan.
-        <br />
-        Melalui teknologi blockchain dan drone rover, kami membawa revolusi 
-        <br />
-        dalam pengelolaan perkebunan.
+        Proyek ini menghadirkan inovasi besar di dunia pertanian!<br/>
+        Dengan Progressive Web App (PWA), petani dapat mengakses <br/>
+        data cuaca dan harga pasar langsung dari ponsel untuk <br/>
+        keputusan cepat. Drone Rover berbasis IoT otomatis membantu<br/>
+        menyiram tanaman, mengendalikan hama, dan memantau kondisi<br/>
+        lapangan secara real-time. Blockchain memastikan keamanan<br/> 
+        dan transparansi data, memberi petani kepercayaan dalam<br/> 
+        pengelolaan lahan. Ini adalah langkah besar menuju pertanian<br/>
+        yang lebih efisien, modern, dan berkelanjutan.<br/> 
+         Siap mengeksplorasi lebih lanjut?.
         </span>
         {/* <a href={Resume} download>
           <button className="button s-button">Download CV</button>
@@ -52,6 +54,7 @@ const Services = () => {
             emoji={HeartEmoji}
             heading={"Monitoring"}
             detail={"Pemantauan otomatis dengan Drone Rover untuk kesehatan tanaman, kebutuhan pemupukan, dan pengendalian hama."}
+            link="/monitoring.html" // Link untuk halaman Monitoring
           />
         </motion.div>
         {/* second card */}
@@ -64,6 +67,7 @@ const Services = () => {
             emoji={Glasses}
             heading={"Data Management"}
             detail={"Pengelolaan data perkebunan dengan Blockchain untuk transparansi dan akuntabilitas yang lebih baik."}
+            link="/data-management.html" // Link untuk halaman Data Management
           />
         </motion.div>
         {/* 3rd */}
@@ -75,9 +79,8 @@ const Services = () => {
           <Card
             emoji={Humble}
             heading={"Automation"}
-            detail={
-              "Automatisasi proses pemeliharaan tanaman, seperti pemupukan dan penyemprotan, berdasarkan data real-time."
-            }
+            detail={"Automatisasi proses pemeliharaan tanaman, seperti pemupukan dan penyemprotan, berdasarkan data real-time."}
+            link="/automation.html" // Link untuk halaman Automation
             color="rgba(252, 166, 31, 0.45)"
           />
         </motion.div>

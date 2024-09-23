@@ -21,12 +21,10 @@ const Intro = () => {
       {/* left name side */}
       <div className="i-left">
         <div className="i-name">
-          <span style={{ color:  "" }}>Smart Agriculture </span>
-          <span>with Drone-Rover</span>
+          <span style={{ color:  "" }}>Pengembangan Berkelanjutan </span>
+          <span>Dengan Drone-Rover</span>
           <span>
-          Meningkatkan Produktivitas Perkebunan Kelapa Sawit dengan Teknologi 
-          Blockchain dan Drone Rover dari Universitas Lampung
-          </span>
+          Di sini, Anda akan menemukan solusi revolusioner yang menggabungkan kekuatan Internet of Things (IoT) dan blockchain untuk membawa efisiensi baru dalam pertanian presisi di Desa Air Kubang. Temukan bagaimana drone rover dan aplikasi web yang canggih mampu mengubah cara petani bekerja dan meningkatkan produktivitas mereka. Jangan lewatkan kesempatan emas ini dan kunjungi sekarang kemudian temukan keajaiban teknologi masa depan!          </span>
         </div>
         <Link to="/dashboard" className="i-button" style={{ textDecoration: 'none' }}>
   <button className="button">Dashboard</button>
@@ -36,7 +34,8 @@ const Intro = () => {
         <div className="i-icons">
           <img src={Github} alt="" />
           <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
+          <a href="https://www.instagram.com/ppkormawa.kopmaunila?igsh=MW96ZXBxamQ3Njh1aw==" target="_blank" rel="noopener noreferrer">
+          <img src={Instagram} alt="Instagram" /></a>
         </div>
       </div>
       {/* right image side */}

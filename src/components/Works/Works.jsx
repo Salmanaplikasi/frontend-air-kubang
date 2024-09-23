@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./Works.css";
-import Upwork from "../../imgs/bpdpks.png";
+import Upwork from "../../imgs/koperasiunila.png";
 import Fiverr from "../../imgs/kemenkeu.png";
-import Amazon from "../../imgs/sawit.png";
+import Amazon from "../../imgs/ppkunila.png";
 import Shopify from "../../imgs/unila.png";
 import Facebook from "../../imgs/handayani.png";
 // import { themeContext } from "../../Context";
@@ -21,18 +21,22 @@ const Works = () => {
         <div className="awesome">
           {/* dark Mode */}
           <span style={{ color:  "" }}>
-            Works for All these
+            Kerjasama Dengan Semua
           </span>
-          <span>Brands & Clients</span>
+          <span>Merek & klien</span>
           <spane>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
-            <br />
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
-            <br />
-            y dummy text of printingLorem
-            <br />
-            ispum is simpley dummy text of printing
+          Proyek ini berkolaborasi dengan BPDPKS, Kementerian<br/>
+          Keuangan, Kementerian Pendidikan, dan Universitas Lampung<br/>
+          untuk mendorong inovasi dan keberlanjutan di perkebunan<br/> 
+          khususnya perkebunan lada. Bersama, mereka menciptakan solusi<br/> 
+          cerdas yang berdampak besar bagi masa depan industri dan pendidikan.
+
+
+
+
+
+
+
           </spane>
           {/* <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>

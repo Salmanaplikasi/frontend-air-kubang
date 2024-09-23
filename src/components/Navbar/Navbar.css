@@ -61,3 +61,100 @@
   }
 }
   
+
+
+.n-left img {
+  height: auto; /* Otomatis menjaga proporsi */
+  max-height: 50px; /* Atur tinggi maksimum logo */
+}
+.n-wrapper {
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  top: 0;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.n-left {
+  flex: 1;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  gap: 2rem;
+}
+
+.n-logo-background {
+  width: 300px; /* Ukuran tetap untuk logo */
+  height: 55px; /* Tinggi tetap */
+  margin-top: 20px; /* Jarak atas */
+  background-color: white; /* Latar belakang putih */
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Memusatkan gambar secara vertikal */
+  gap: 5px; /* Jarak antara gambar */
+  overflow: hidden; /* Mencegah gambar keluar dari background */
+  position: relative; /* Atur posisi untuk menggunakan z-index */
+  z-index: 1; /* Pastikan ini di atas elemen lain */
+}
+
+.n-logo-background img {
+  height: 100%; /* Menyesuaikan tinggi gambar */
+  width: auto; /* Menjaga proporsi gambar */
+  position: relative; /* Pastikan gambar bisa menggunakan z-index */
+  z-index: 2; /* Pastikan gambar muncul di atas latar belakang */
+}
+
+.n-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 400;
+}
+
+.n-list {
+  flex: 10;
+}
+
+.n-list > ul {
+  display: flex;
+  gap: 2rem;
+  margin-right: 4rem;
+}
+
+.n-list > ul :hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.n-button {
+  flex: 2;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 480px) {
+  .n-list {
+    display: none;
+  }
+
+  .n-name {
+    font-size: 1rem;
+  }
+
+  .n-button {
+    display: none;
+  }
+}
+
+/* Menyesuaikan tinggi dan proporsi logo */
+.n-left img {
+  height: auto; /* Otomatis menjaga proporsi */
+  max-height: 48px; /* Tinggi maksimum logo */
+  display: block; /* Pastikan gambar tampil sebagai blok */
+}
+
+/* Tambahan untuk latar belakang yang lebih jelas */
+.n-logo-background {
+  border: 1px solid #ccc; /* Tambahkan border untuk melihat batasan */
+}

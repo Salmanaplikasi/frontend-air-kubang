@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drone Rover - Teknologi Lada</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #e0f7e9;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: fadeIn 1.5s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Title */
+        h1 {
+            font-size: 2.5rem;
+            color: #2e7d32;
+            margin-bottom: 20px;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 0.3s ease, color 0.3s ease, text-shadow 0.3s ease;
+            animation: glowText 2s infinite;
+        }
+
+        h1:hover {
+            color: #66bb6a;
+            transform: scale(1.2) rotateY(20deg);
+            text-shadow: 0 0 15px rgba(102, 187, 106, 0.7), 0 0 30px rgba(102, 187, 106, 0.7);
+        }
+
+        /* Paragraphs */
+        p {
+            line-height: 1.7;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 15px;
+            text-align: justify;
+            position: relative;
+            animation: slideIn 1s ease forwards;
+            background: linear-gradient(to right, #66bb6a, #388e3c);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        /* Hover Effect on Paragraphs */
+        p:hover {
+            background: none;
+            color: #2e7d32;
+            transition: color 0.5s ease;
+        }
+
+        /* Animated lines before paragraph */
+        p::before {
+            content: "";
+            position: absolute;
+            height: 4px;
+            background-color: #66bb6a;
+            width: 100px;
+            top: -10px;
+            left: 0;
+            animation: growLine 1s ease forwards;
+        }
+
+        p:hover::before {
+            background-color: #388e3c;
+            width: 120px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Parallax background effect */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.example.com/background.jpg') no-repeat center center/cover;
+            z-index: -1;
+            opacity: 0.2;
+            animation: parallaxMove 15s infinite linear;
+        }
+
+        @keyframes parallaxMove {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #4caf50;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #388e3c;
+        }
+
+        /* Keyframes Animations */
+        @keyframes glowText {
+            0%, 100% {
+                text-shadow: 0 0 10px rgba(102, 187, 106, 0.7), 0 0 20px rgba(102, 187, 106, 0.5);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(102, 187, 106, 1), 0 0 40px rgba(102, 187, 106, 0.7);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes growLine {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100px;
+            }
+        }
+
+        /* Hover effects */
+        p:hover {
+            transform: translateX(10px) rotateZ(2deg);
+            transition: all 0.4s ease-in-out;
+        }
+
+        /* Container 3D rotation on hover */
+        .container:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+            transition: all 0.6s ease;
+        }
+
+        /* Fade-in container effect */
+        .container {
+            animation: fadeInContainer 1.5s ease-in-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInContainer {
+            from {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Drone Rover - Teknologi Perkebunan Lada</h1>
+
+        <p>Drone Rover adalah inovasi teknologi yang telah mengubah cara pengelolaan perkebunan lada dengan memanfaatkan teknologi canggih. Drone ini dilengkapi dengan berbagai perangkat seperti sensor multispektral, kamera resolusi tinggi, serta menggunakan teknologi terkini seperti machine learning dan blockchain. Tujuan utama dari penggunaan teknologi ini adalah untuk meningkatkan efisiensi pengelolaan, meningkatkan produktivitas, serta menjaga keberlanjutan lingkungan di perkebunan lada.</p>
+
+        <p>Dalam hal pemantauan kesehatan tanaman, Drone Rover membantu pemilik perkebunan memantau kondisi tanaman secara otomatis dan real-time. Dengan kamera resolusi tinggi dan sensor multispektral, drone dapat menangkap citra visual dari berbagai sudut dan panjang gelombang cahaya. Data yang terkumpul kemudian dianalisis menggunakan machine learning dan computer vision untuk mendeteksi masalah kesehatan tanaman, seperti penyakit, kekurangan nutrisi, atau serangan hama. Pemantauan ini sangat akurat dan mampu mendeteksi masalah sebelum gejala fisik terlihat, memungkinkan tindakan perbaikan dapat segera dilakukan. Selain itu, teknologi ini mengurangi waktu dan biaya pemantauan manual dan memastikan kualitas tanaman tetap terjaga melalui deteksi dini.</p>
+
+        <p>Drone Rover juga memainkan peran penting dalam optimalisasi pemupukan. Sensor yang terpasang pada drone dapat mengukur tingkat kesuburan tanah dan kelembapan di berbagai titik dalam perkebunan. Data yang diperoleh memungkinkan pemilik perkebunan melakukan pemupukan dengan presisi, memberikan pupuk sesuai kebutuhan spesifik tanah di area tertentu. Dengan informasi akurat ini, pemborosan pupuk dan air dapat diminimalkan, tidak hanya meningkatkan efisiensi biaya operasional, tetapi juga membantu menjaga lingkungan dari pencemaran akibat penggunaan pupuk berlebih yang dapat mencemari tanah dan air. Optimalisasi berbasis data ini adalah langkah penting untuk meningkatkan produktivitas secara berkelanjutan.</p>
+
+        <p>Pengendalian hama di perkebunan lada juga diuntungkan dengan kehadiran Drone Rover. Serangan hama dapat menyebabkan kerusakan signifikan pada tanaman dan menurunkan produktivitas perkebunan. Dengan teknologi sensor dan kamera, drone mampu memantau keberadaan hama serta menganalisis pola penyebarannya di seluruh lahan. Informasi ini memungkinkan pemilik perkebunan melakukan tindakan pengendalian hama secara lebih tepat waktu dan fokus pada area yang terkena dampak. Hal ini mengurangi kebutuhan untuk penyemprotan pestisida secara menyeluruh, sehingga penggunaan bahan kimia dapat diminimalkan, serta dampak negatif terhadap lingkungan juga berkurang. Sistem ini memberikan respons cepat terhadap ancaman hama yang berkembang, sehingga lebih efisien dalam pengendalian.</p>
+
+        <p>Kemampuan Drone Rover untuk melakukan pemantauan berkala dan real-time sangat membantu pemilik perkebunan dalam mengambil keputusan yang lebih tepat dan berdasarkan informasi yang valid. Drone ini mampu terbang di atas lahan untuk mengumpulkan data tentang kondisi tanaman, kelembapan tanah, serta tingkat infestasi hama. Data yang dikumpulkan kemudian diolah dan disajikan dalam bentuk yang mudah dipahami, memungkinkan pengambilan keputusan yang lebih efektif terkait tindakan perawatan tanaman, pemupukan, atau pengendalian hama. Dengan demikian, pemilik perkebunan dapat merespons lebih cepat terhadap perubahan di lapangan dan meningkatkan efisiensi pengelolaan sumber daya.</p>
+
+        <p>Salah satu keunggulan lain dari Drone Rover adalah kemampuannya untuk menyimpan data secara aman melalui integrasi teknologi blockchain. Blockchain memastikan bahwa data yang disimpan terdesentralisasi, aman, dan tidak dapat diubah, sehingga pemilik perkebunan dapat yakin bahwa data mereka tidak dimanipulasi. Sistem blockchain offline juga memungkinkan penyimpanan data secara aman di daerah dengan akses internet terbatas, sehingga perkebunan di lokasi terpencil tetap dapat memanfaatkan teknologi ini. Hal ini memberikan tingkat transparansi yang tinggi dalam pengelolaan data, serta mempermudah audit dan pelacakan informasi terkait pengelolaan perkebunan.</p>
+
+        <p>Penggunaan Drone Rover dalam pengelolaan perkebunan lada tidak hanya meningkatkan efisiensi, tetapi juga memberikan manfaat besar bagi lingkungan. Dengan pemantauan yang tepat, penggunaan pupuk, pestisida, dan air dapat dioptimalkan, sehingga mengurangi pemborosan dan dampak lingkungan yang berlebihan. Penerapan drone ini mendukung keberlanjutan dengan membantu pemilik perkebunan dalam membuat keputusan yang lebih ramah lingkungan, menjaga keseimbangan ekosistem, serta meminimalkan jejak karbon. Secara keseluruhan, teknologi ini tidak hanya berkontribusi pada peningkatan produktivitas, tetapi juga mendorong praktik pertanian yang lebih bertanggung jawab dan berkelanjutan.</p>
+
+        <p>Kesimpulannya, Drone Rover merupakan revolusi teknologi yang menawarkan solusi menyeluruh dalam pengelolaan perkebunan lada. Teknologi ini menggabungkan berbagai inovasi canggih seperti pemantauan kesehatan tanaman, optimalisasi pemupukan, pengendalian hama, serta integrasi blockchain, untuk menciptakan sistem pengelolaan yang lebih efisien, aman, dan ramah lingkungan. Dengan demikian, Drone Rover tidak hanya berkontribusi pada peningkatan hasil dan efisiensi biaya operasional, tetapi juga mendorong keberlanjutan industri lada, menjadikannya alat yang sangat berharga untuk masa depan.</p>
+    </div>
+</body>
+
+</html>

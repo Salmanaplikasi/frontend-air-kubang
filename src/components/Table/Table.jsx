@@ -12,6 +12,7 @@ import "./Table.css";
 export default function BasicTable() {
   const [rows, setRows] = useState([]);
 
+  // Fungsi untuk fetch data dari API
   const fetchData = () => {
     fetch("https://api.xsmartagrichain.com/data/15m")
       .then((response) => response.json())
@@ -24,16 +25,17 @@ export default function BasicTable() {
   };
 
   useEffect(() => {
-    // Fetch data when the component mounts
+    // Fetch data saat komponen pertama kali dimuat
     fetchData();
 
-    // Polling every 60 seconds (60000 milliseconds)
+    // Polling setiap 60 detik (60000 milidetik)
     const intervalId = setInterval(fetchData, 60000);
 
-    // Cleanup interval on component unmount
+    // Cleanup interval ketika komponen tidak lagi digunakan
     return () => clearInterval(intervalId);
   }, []);
 
+  // Fungsi untuk format timestamp ke dalam format yang lebih mudah dibaca
   const formatTimestamp = (timestamp) => {
     const date = new Date(timestamp);
     const hours = String(date.getUTCHours()).padStart(2, '0');
@@ -57,10 +59,10 @@ export default function BasicTable() {
           <TableHead>
             <TableRow>
               <TableCell>Timestamp</TableCell>
-              <TableCell align="left">Latitude</TableCell>
-              <TableCell align="left">Longitude</TableCell>
               <TableCell align="left">Lux</TableCell>
               <TableCell align="left">Temperature</TableCell>
+              <TableCell align="left">Lux (Secondary)</TableCell>
+              <TableCell align="left">Temperature (Secondary)</TableCell>
               <TableCell align="left">Humidity</TableCell>
             </TableRow>
           </TableHead>
@@ -73,8 +75,8 @@ export default function BasicTable() {
                 <TableCell component="th" scope="row">
                   {formatTimestamp(row.timestamp)}
                 </TableCell>
-                <TableCell align="left">{row.latitude}</TableCell>
-                <TableCell align="left">{row.longitude}</TableCell>
+                <TableCell align="left">{row.lux}</TableCell>
+                <TableCell align="left">{row.temperature}°C</TableCell>
                 <TableCell align="left">{row.lux}</TableCell>
                 <TableCell align="left">{row.temperature}°C</TableCell>
                 <TableCell align="left">{row.humidity}%</TableCell>

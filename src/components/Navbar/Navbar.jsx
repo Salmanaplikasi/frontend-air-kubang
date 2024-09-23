@@ -1,13 +1,22 @@
 import React from "react";
 import "./Navbar.css";
 import { Link } from "react-scroll";
-const navbar = () => {
+
+const Navbar = () => {
   return (
     <div className="n-wrapper" id="Navbar">
       {/* left */}
       <div className="n-left">
-        <div className="n-name">Roone</div>
+        {/* Background putih menggantikan teks "Roone" */}
+        <div className="n-logo-background">
+          <img src={`${process.env.PUBLIC_URL}/handayani.png`} alt="Handayani" />
+          <img src={`${process.env.PUBLIC_URL}/unila.png`} alt="Unila" />
+          <img src={`${process.env.PUBLIC_URL}/kampusmerdeka.png`} alt="Kampus Merdeka" />
+          <img src={`${process.env.PUBLIC_URL}/ppkunila.png`} alt="PPK Unila" />
+          <img src={`${process.env.PUBLIC_URL}/koperasiunila.png`} alt="Koperasi Unila" />
+        </div>
       </div>
+
       {/* right */}
       <div className="n-right">
         <div className="n-list">
@@ -19,7 +28,7 @@ const navbar = () => {
             </li>
             <li>
               <Link to="services" spy={true} smooth={true}>
-                Serivces
+                Services
               </Link>
             </li>
             <li>
@@ -27,24 +36,16 @@ const navbar = () => {
                 Experience
               </Link>
             </li>
-            <li>
-              {/* <Link to="portfolio" spy={true} smooth={true}>
-                Protfolio
-              </Link> */}
-            </li>
-            <li>
-              {/* <Link to="testimonial" spy={true} smooth={true}>
-                Testimonial
-              </Link> */}
-            </li>
+            <li></li>
+            <li></li>
           </ul>
         </div>
         <Link to="contact" spy={true} smooth={true}>
-        <button className="button n-button">Contact</button>
+          <button className="button n-button">Contact</button>
         </Link>
       </div>
     </div>
   );
 };
 
-export default navbar;
+export default Navbar;

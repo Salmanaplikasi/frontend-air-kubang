@@ -31,7 +31,7 @@ export const SidebarData = [
 export const UpdatesData = [
   {
     img: img1,
-    name: "I Nengah Marccel JBC TE21",
+    name: "I Nengah Marccel ",
     noti: "has update the program",
     time: "4 days ago",
   },
@@ -142,6 +142,44 @@ export const CardsDataComponent = () => {
       ],
       xaxis: timestamps, // 10 timestamps terakhir untuk grafik
     },
+    // Kolom tambahan untuk Lux
+    {
+      title: "Lux (Secondary)",
+      color: {
+        backGround: "linear-gradient(180deg, #56CCF2 0%, #2F80ED 100%)",
+        boxShadow: "0px 10px 20px 0px #A3DAF6",
+      },
+      barValue: 70,
+      value: luxData[luxData.length - 1], // Menggunakan data yang sama dari Lux
+      satuan: " lx",
+      png: UilSun,
+      series: [
+        {
+          name: "Lux",
+          data: luxData, // Data yang sama digunakan untuk grafik
+        },
+      ],
+      xaxis: timestamps, // Menggunakan timestamps yang sama
+    },
+    // Kolom tambahan untuk Temperature
+    {
+      title: "Temperature (Secondary)",
+      color: {
+        backGround: "linear-gradient(180deg, #FFBA75 0%, #FF984B 100%)",
+        boxShadow: "0px 10px 20px 0px #FFBA75",
+      },
+      barValue: 80,
+      value: temperatureData[temperatureData.length - 1], // Menggunakan data yang sama dari Temperature
+      satuan: " °C",
+      png: UilTemperature,
+      series: [
+        {
+          name: "Temperature",
+          data: temperatureData, // Data yang sama digunakan untuk grafik
+        },
+      ],
+      xaxis: timestamps, // Menggunakan timestamps yang sama
+    }
   ];
 
   return { cardsData };
